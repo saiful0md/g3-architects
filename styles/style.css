@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap");
+
+/* shared css */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+}
+.btn-primary{
+    border-radius: 0.5rem;
+    background: #FF900E;  
+    color: #FFF;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1.2rem 1.8rem;
+    border: none;
+}
+
+
+/* header styles */
+header {
+  background: rgba(255, 144, 14, 0.1);
+  padding: 3.2rem 6.2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6.2rem;
+}
+nav h3 {
+  color:  #131313;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+nav ul {
+  display: flex;
+  gap: 1.8rem;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #424242;
+}
+.banner-container{
+    text-align: center;
+}
+.banner-container .banner-content{
+    margin: 0 auto;
+    max-width: 862px;
+    width: 100%;
+    margin-bottom: 4.7rem;
+}
+.banner-container .banner-content .banner-title{
+    color:  #131313;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.banner-container .banner-content .banner-description{
+    color: #727272;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6rem; 
+    margin: 1.8rem 0rem 1.8rem 0rem;
+}
+.banner-container img{
+    max-width: 1440px;
+    width: 100%;
+}
+/* main section */
+section {
+    padding: 3.2rem 6.2rem;
+}
+/* quick-list section styles */
+.quick-list-container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+.quick-list-teams{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 50%;
+}
+.quick-list-teams img{
+    max-width: 342px;
+    width: 100%;
+}
+.quick-list-content{
+    width: 50%;
+}
+.quick-list-title{
+    color: #131313;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.quick-list-title .quick{
+    color:#727272;
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+.quick-list-title .features{
+    color: #FF900E;
+}
+.quick-list-description{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6rem; 
+    margin: 1.8rem 0rem 1.8rem 0rem;
+}
+/* Features styles */
+.features{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    /* align-items: center; */
+    gap: 9.2rem;
+}
+.features-content{
+    max-width: 586px;
+    width: 100%;
+}
+.features-content .features-title{
+    color:#131313;
+    font-size: 2.8rem;
+    font-weight: 700;
+    border-left: 0.3rem solid #FF900E ;
+    padding-left: 1.3rem;
+}
+.features-content .features-description{
+    color:#727272;
+    font-weight: 400;
+    line-height: 1.6rem;
+}
+.features-content .card{
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    margin: 1.3rem 0rem 1.3rem 0rem;
+    padding: 1.8rem;
+}
+.features-content .card .card-title{
+    color:#131313;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+}
+.features-content .card .card-description{
+    color:#727272;
+    font-weight: 400;
+    line-height: 1.6rem;
+}
+.ten-years-badge{
+    background-color: #FF900E;
+    width: 342px;
+    padding: 4rem;
+    /* height: 200px; */
+}
+.ten-years-badge h2{
+    color: #FFF;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.2rem;
+}
+.ten-years-badge p{
+    color: #FFF;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+}
+
+
+/* Responsive styles */
+/* Responsive For mobile device */
+@media screen and (max-width:576px) {
+    header {
+        padding: 1rem 1.2rem;
+    }
+    nav,
+    .quick-list-container
+    {
+        flex-direction: column;
+    }
+    nav ul {
+        gap: 0.8rem;
+    }
+    nav h3 {
+        margin-bottom: 1.4rem;
+    }
+    section{
+        padding: 1rem 1.2rem;
+       
+    }
+    .quick-list-teams{
+        width: 100%;
+    }
+    .quick-list-content{
+        width: 100%;
+        text-align: center;
+    }
+}
+/* Responsive For tablets and medium device */
+@media screen and (min-width:576px) and (max-width:980px){
+    header {
+        padding: 1rem 1.2rem;
+    }
+    nav{
+        flex-direction: column;
+    }
+    nav ul {
+        gap: 0.8rem;
+    }
+    nav h3 {
+        margin-bottom: 1.4rem;
+    }
+}

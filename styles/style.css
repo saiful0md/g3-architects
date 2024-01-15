@@ -21,14 +21,14 @@
 /* header styles */
 header {
   background: rgba(255, 144, 14, 0.1);
-  padding: 3.2rem 6.2rem;
+  padding: 50px 100px;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 6.2rem;
+  margin-bottom: 100px;
 }
 nav h3 {
   color:  #131313;
@@ -54,7 +54,6 @@ nav ul li a {
 .banner-container .banner-content{
     margin: 0 auto;
     max-width: 862px;
-    width: 100%;
     margin-bottom: 4.7rem;
 }
 .banner-container .banner-content .banner-title{
@@ -74,31 +73,29 @@ nav ul li a {
     width: 100%;
 }
 /* main section */
-section {
-    padding: 3.2rem 6.2rem;
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+section{
+    padding: 50px 100px;
 }
 /* quick-list section styles */
 .quick-list-container{
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-
 }
 .quick-list-teams{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    width: 50%;
 }
 .quick-list-teams img{
     max-width: 342px;
-    width: 100%;
+    width: 90%;
 }
 .quick-list-content{
-    width: 50%;
+    width: 65%;
 }
 .quick-list-title{
     color: #131313;
@@ -121,16 +118,11 @@ section {
 }
 /* Features styles */
 .features{
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
     display: flex;
-    /* align-items: center; */
-    gap: 9.2rem;
 }
 .features-content{
-    max-width: 586px;
-    width: 100%;
+    max-width: 580px;
+    width: 80%;
 }
 .features-content .features-title{
     color:#131313;
@@ -162,11 +154,19 @@ section {
     font-weight: 400;
     line-height: 1.6rem;
 }
-.ten-years-badge{
-    background-color: #FF900E;
-    width: 342px;
-    padding: 4rem;
-    /* height: 200px; */
+.features-img img{
+    height: 90%;
+    width: 100%;
+
+}
+.ten-years-badge {
+    right: 40px;
+    border-radius: 8px;
+    background: #FF900E;
+    width: 250px;
+    padding: 1rem 2rem;
+    position: relative;
+    bottom: 100px;
 }
 .ten-years-badge h2{
     color: #FFF;
@@ -183,6 +183,86 @@ section {
     line-height: 2.5rem;
 }
 
+/* some facts styles*/
+
+.some-facts-content {
+    max-width: 542px;
+}
+.some-facts-content h3{
+    color:#131313;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.some-facts-content p{
+    color:  #727272;
+    line-height: 26px;
+    margin-bottom: 100px; 
+}
+
+.some-facts-card-container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+.some-facts-card-container .card{
+    max-width: 242px;
+    width: 100%;
+    padding: 20px;
+}
+
+.some-facts-card-container .card h3{
+    color:  #424242;
+    font-size: 45px;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+.some-facts-card-container .card p{
+    color: #727272;
+    font-size: 20px;
+    font-weight: 600;
+}
+/* our-sponspors styles */
+
+.our-sponspors{
+    margin-top: 100px;
+}
+.our-sponspors h2{
+    color: #131313;
+    font-size: 45px;
+    font-weight: 700;
+    max-width: 330px;
+    margin: 0 auto;
+    text-align: center;
+}
+.our-sponspors p{
+    color: #727272;
+    max-width: 542px;
+    margin: 30px auto;
+    text-align: center;
+}
+.our-sponspors-logos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* footer section styles */
+footer{
+    max-width: 1440px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background: #FFF4E7;
+    padding: 50px 100px;
+    text-align: center;
+}
+
+
+
+
+
 
 /* Responsive styles */
 /* Responsive For mobile device */
@@ -191,7 +271,8 @@ section {
         padding: 1rem 1.2rem;
     }
     nav,
-    .quick-list-container
+    .quick-list-container,
+    .features
     {
         flex-direction: column;
     }
@@ -201,16 +282,25 @@ section {
     nav h3 {
         margin-bottom: 1.4rem;
     }
-    section{
-        padding: 1rem 1.2rem;
-       
-    }
+
     .quick-list-teams{
         width: 100%;
+        grid-template-columns: 1fr;
+        margin-bottom: 30px;
     }
     .quick-list-content{
         width: 100%;
         text-align: center;
+    }
+    .features-img img{
+        width: 100%;
+    }
+    .some-facts-card-container{
+        flex-direction: column;
+    }
+    .our-sponspors-logos{
+        flex-direction: column;
+        gap: 50px;
     }
 }
 /* Responsive For tablets and medium device */
@@ -218,7 +308,8 @@ section {
     header {
         padding: 1rem 1.2rem;
     }
-    nav{
+    nav,
+    .features{
         flex-direction: column;
     }
     nav ul {
@@ -226,5 +317,12 @@ section {
     }
     nav h3 {
         margin-bottom: 1.4rem;
+    }
+    .some-facts-card-container{
+        flex-direction: column;
+    }
+    .our-sponspors-logos{
+        flex-direction: column;
+        gap: 50px;
     }
 }
